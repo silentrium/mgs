@@ -1,0 +1,177 @@
+/* Khai báo bảng màu lấy từ bức ảnh (Lo-fi Twilight Palette) */
+:root {
+    --bg-dark: #1a162b;
+    --bg-gradient: linear-gradient(135deg, #181428 0%, #2b1f47 50%, #58335c 80%, #7e486c 100%);
+    --card-bg: rgba(255, 255, 255, 0.07);
+    --border-color: rgba(255, 255, 255, 0.12);
+    --text-primary: #f3e9f8;
+    --text-secondary: #c3b5d3;
+    --accent-glow: #e090b8;
+    --accent-purple: #9a65a8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background: var(--bg-gradient);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header & Nav */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background: rgba(24, 20, 40, 0.4);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border-color);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--accent-glow);
+    text-shadow: 0 0 10px rgba(224, 144, 184, 0.5);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav ul li a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 6px 12px;
+    border-radius: 8px;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #fff;
+    background: var(--card-bg);
+    box-shadow: 0 0 15px rgba(224, 144, 184, 0.2);
+}
+
+/* Hero Section */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.hero {
+    max-width: 700px;
+    text-align: center;
+    background: var(--card-bg);
+    padding: 50px 40px;
+    border-radius: 24px;
+    border: 1px solid var(--border-color);
+    backdrop-filter: blur(16px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+.badge {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(224, 144, 184, 0.15);
+    color: var(--accent-glow);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border: 1px solid rgba(224, 144, 184, 0.3);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 16px;
+    background: linear-gradient(to right, #ffffff, var(--accent-glow));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--accent-purple), var(--accent-glow));
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(154, 101, 168, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(224, 144, 184, 0.6);
+}
+
+.btn-secondary {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    border: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hidden-msg {
+    margin-top: 25px;
+    font-size: 1rem;
+    color: var(--accent-glow);
+    min-height: 24px;
+    font-style: italic;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    border-top: 1px solid var(--border-color);
+    background: rgba(24, 20, 40, 0.6);
+}
